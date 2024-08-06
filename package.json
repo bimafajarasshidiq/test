@@ -23,6 +23,5 @@
     "express-mysql-session": "^3.0.3",
     "mysql": "^2.18.1"
   },
-  "keywords": [],
-  "devDependencies": {}
+  "keywords": []
 }
