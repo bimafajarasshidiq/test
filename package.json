@@ -15,5 +15,13 @@
     "url": "https://github.com/bimafajarasshidiq/appsppd/issues"
   },
   "homepage": "https://github.com/bimafajarasshidiq/appsppd#readme",
-  "description": "aplikasi perjalanan dinas"
+  "description": "aplikasi perjalanan dinas",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-mysql-session": "^3.0.3",
+    "mysql": "^2.18.1"
+  },
+  "keywords": []
 }
