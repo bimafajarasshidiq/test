@@ -8,8 +8,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 //panggil routes
-var router = require('./router');
-router(app);
+var routes = require('./routes');
+routes(app);
 
 
 app.listen(3000, () => {
