@@ -31,3 +31,21 @@ exports.akunberdasarkanid = function(req,res) {
         });
     
 };
+
+
+//Menambahkan Data Akun Pegawai
+exports.tambahakun = function(req,res){
+    var username = req.body.username;
+    var password = req.body.password;
+
+    connection.query('INSERT INTO tb_login (username,password) VALUES(?,?)',
+        [username,password],
+        function(erorr,rows,fields){
+            if(erorr){
+                console.log(erorr);
+            }else{
+                response.ok("Berhasil di tambahkan!!",res);
+            }
+            });
+        };
+    
