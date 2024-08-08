@@ -12,7 +12,11 @@ module.exports = function(app) {
     app.route('/tampil/:id')
        .get(jsonku.akunberdasarkanid);
 
-    app.route('/tambah').post(jsonku.tambahakun);
+    app.route('/tambah')
+      .post(jsonku.tambahakun);
+
+    app.route('/ubah')
+        .put(jsonku.ubahakun);
  
 
 }

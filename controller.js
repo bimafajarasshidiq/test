@@ -49,3 +49,19 @@ exports.tambahakun = function(req,res){
             });
         };
     
+        //Mengubah Data Akun Pegawai
+        exports.ubahakun = function(req,res){
+            var id =req.body.id_login;
+            var username = req.body.username;
+            var password = req.body.password;
+        
+        connection.query('UPDATE tb_login SET username=?, password=? WHERE id_login=?', 
+            [username, password, id],
+            function(erorr,rows,fields){
+                if (erorr){
+                    console.log(erorr);
+                }else{
+                    response.ok("Berhasil di Ubah!!",res)
+                }
+            });
+        }
