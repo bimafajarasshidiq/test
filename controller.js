@@ -11,9 +11,23 @@ exports.index = function (req, res) {
 exports.tampilakun = function (req, res) {
     connection.query('SELECT * FROM tb_login', function(erorr, rows, fileds){
         if(erorr){
-            connection.log(erorr);
+            console.log(erorr);
         }else {
             response.ok(rows, res)
         }
     });
+};
+
+//Menampilkan Semua Data Akun berdasarkan id
+exports.akunberdasarkanid = function(req,res) {
+    let id = req.params.id;
+    connection.query('SELECT * FROM tb_login WHERE id_login = ?', [id],
+        function(erorr,rows, fields){
+            if(erorr){
+                console.log(erorr);
+            }else{
+                response.ok(rows, res);
+            }
+        });
+    
 };
