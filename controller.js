@@ -64,4 +64,19 @@ exports.tambahakun = function(req,res){
                     response.ok("Berhasil di Ubah!!",res)
                 }
             });
-        }
+        };
+
+        //Menghapus data berdasarkan id login
+
+        exports.hapusberdasarkanid = function(req, res) {
+            var id = req.body.id_login;
+            connection.query('DELETE FROM tb_login WHERE id_login=?',[id],
+                function(erorr, rows, fields) {
+                    if(erorr){
+                        console.log(erorr);
+                    }else{
+                        response.ok("Berhasil di Hapus!!!",res)
+                    }
+                });
+            
+        };

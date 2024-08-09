@@ -17,6 +17,9 @@ module.exports = function(app) {
 
     app.route('/ubah')
         .put(jsonku.ubahakun);
+
+    app.route('/hapus')
+         .delete(jsonku.hapusberdasarkanid);
  
 
 }
